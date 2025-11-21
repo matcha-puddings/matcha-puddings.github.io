@@ -1,0 +1,39 @@
+baseURL = "https://matcha-puddings.github.io/"
+languageCode = "en-us"
+title = "Louise's Musings"
+theme = "ananke"
+
+[params.ananke.social]
+  [params.ananke.social.networks]
+    github.label = "Github"
+    github.icon = "github"
+    github.profile = "https://github.com/%s"
+    linkedin.label = "LinkedIn"
+    linkedin.icon = "linkedin"
+    linkedin.profile = "https://linkedin.com/in/%s"
+
+  [params.ananke.social.github]
+    username = "matcha-puddings"
+
+  [params.ananke.social.linkedin]
+    profilelink = "https://www.linkedin.com/in/thatslouise/"
+
+  [params.ananke.social.follow]
+    networks = ["github", "linkedin"]
+
+# Main menu
+[menu]
+  [[menu.main]]
+    name = "Tech Blog"
+    url  = "/post/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Photography"
+    url  = "/photography/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Book Reviews"
+    url  = "/book-reviews/"
+    weight = 3

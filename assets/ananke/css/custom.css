@@ -1,0 +1,200 @@
+/* Color Palette - Warm & Vivid inspired by artistic/organic aesthetic */
+:root {
+  --warm-cream: #F5F1ED;
+  --warm-beige: #E8E4DF;
+  --soft-taupe: #D4CFC8;
+  --rich-brown: #2C2520;
+  --deep-charcoal: #3A3631;
+  --accent-warm: #C9B8A8;
+}
+
+/* Override default backgrounds */
+body {
+  background-color: var(--warm-cream) !important;
+  color: var(--rich-brown) !important;
+}
+
+/* Main content areas */
+.bg-white {
+  background-color: var(--warm-cream) !important;
+}
+
+.bg-black {
+  background-color: var(--rich-brown) !important;
+}
+
+.bg-near-white {
+  background-color: var(--warm-beige) !important;
+}
+
+.bg-near-black {
+  background-color: var(--deep-charcoal) !important;
+}
+
+/* Text colors */
+.black, .near-black {
+  color: var(--rich-brown) !important;
+}
+
+.white, .near-white {
+  color: var(--warm-cream) !important;
+}
+
+/* Fix white text in headers/nav - override theme defaults */
+header .white, nav .white,
+header .near-white, nav .near-white,
+.site-title, .site-title a {
+  color: var(--rich-brown) !important;
+}
+
+/* Links */
+a {
+  color: var(--deep-charcoal);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rich-brown);
+}
+
+/* Headers and navigation */
+header, nav {
+  background-color: var(--warm-cream) !important;
+  color: var(--rich-brown) !important;
+}
+
+header a, nav a, .site-title a {
+  color: var(--rich-brown) !important;
+}
+
+header a:hover, nav a:hover {
+  color: var(--deep-charcoal) !important;
+}
+
+/* Cards and sections */
+article, .post, .pa3, .pa4 {
+  background-color: var(--warm-cream);
+}
+
+/* Borders */
+.ba, .bb, .bt, .bl, .br {
+  border-color: var(--soft-taupe) !important;
+}
+
+/* Shadows - add warmth */
+.shadow-1, .shadow-2, .shadow-3, .shadow-4, .shadow-5 {
+  box-shadow: 0 2px 8px rgba(44, 37, 32, 0.1) !important;
+}
+
+/* shrink container padding on small screens */
+@media (max-width: 768px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* make menu toggle visible */
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-toggle.active + .nav-menu {
+    display: block;
+  }
+}
+
+/* Apply to all base text */
+body, .content, .measure, .f5, .f4, .f3, .f2, .f1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Typography - Clean and elegant hierarchy */
+h1 {
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--rich-brown);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--rich-brown);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--deep-charcoal);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--deep-charcoal);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Article/post page title - elegant and understated */
+article > h1:first-of-type,
+.post > h1:first-of-type,
+.f1, .f-headline, .f-subheadline {
+  font-size: 1.65rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important;
+  color: var(--deep-charcoal) !important;
+}
+
+/* Section labels - minimal and refined */
+.book-reviews-header, .tech-blog-header,
+header.sans-serif {
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: var(--accent-warm) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* Better spacing for content */
+article, .post {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Paragraph spacing for better readability */
+p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+/* Date styling - subtle */
+time, .date {
+  font-size: 0.85rem;
+  color: var(--accent-warm);
+  font-weight: 400;
+}

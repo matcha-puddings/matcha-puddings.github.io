@@ -1,0 +1,32 @@
+/* Make content more responsive and use more screen width */
+
+/* Increase max-width for article content */
+article.measure-wide {
+  max-width: 50rem !important;
+}
+
+/* Better responsive width for medium and large screens */
+@media screen and (min-width: 60em) {
+  article.measure-wide {
+    max-width: 60rem !important;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  article.measure-wide {
+    max-width: 70rem !important;
+  }
+}
+
+/* Ensure paragraphs and text content can expand */
+article p,
+article ul,
+article ol,
+article blockquote {
+  max-width: 100%;
+}
+
+/* Better line height for readability */
+article.lh-copy {
+  line-height: 1.6;
+}

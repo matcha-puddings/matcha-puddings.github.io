@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+# Hugo build artifacts
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+
+# Node tooling (themes/ananke uses npm for asset builds)
+node_modules/
+
+# Editor and backup files
+*.log
+*.tmp
+*.bak

@@ -1,0 +1,9 @@
+{{/* layouts/shortcodes/gallery.html */}}
+{{ $imgs := .Page.Resources.Match "*.{jpg,jpeg,png,gif}" }}
+<div class="gallery-grid">
+  {{ range $imgs }}
+    <div class="gallery-item">
+      <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+    </div>
+  {{ end }}
+</div>

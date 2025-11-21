@@ -1,0 +1,52 @@
+<nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
+      {{ with .Site.Params.site_logo }}
+        <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+
+    <div class="flex-l items-center">
+      {{ partials.Include "i18nlist.html" . }}
+
+      <!-- BEGIN MENU -->
+      {{ if .Site.Menus.main }}
+        <!-- Hamburger toggle (hidden on large screens) -->
+        <button id="nav-toggle" class="dn-l pa2">☰</button>
+
+        <!-- Menu (visible on large, hidden on small by default) -->
+        <ul id="nav-menu" class="dn-l flex-l {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+          {{ range .Site.Menus.main }}
+            <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+              <a class="hover-white white-90 no-underline" href="{{ .URL | relURL }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+
+        <script>
+          const btn = document.getElementById('nav-toggle');
+          const menu = document.getElementById('nav-menu');
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              btn.classList.toggle('active');
+              menu.classList.toggle('dn');
+            });
+            menu.querySelectorAll('a').forEach(a =>
+              a.addEventListener('click', () => {
+                btn.classList.remove('active');
+                menu.classList.add('dn');
+              })
+            );
+          }
+        </script>
+      {{ end }}
+      <!-- END MENU -->
+
+      {{ partials.IncludeCached "social/follow.html" . }}
+    </div>
+  </div>
+</nav>
